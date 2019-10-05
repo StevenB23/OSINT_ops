@@ -43,7 +43,6 @@ except Exception as e:
     pass
 
 #write the list into the new file to capture all unique deduplicated items
-#CHANGE THE FILE NAME!
 list_item3 = sorted(urls)# sort a-z
 output_file = './zap_urls.txt' #enter name of your new list which will be placed in the path we gave above
 for item in list_item3:
