@@ -2,7 +2,7 @@
 
 # use a python env and make sure these modules are installed "pip instal <module>"
 import time
-from zapv2 import ZAPv2 #you need to first run OWASP from command line to then use this api with it
+from zapv2 import ZAPv2
 import subprocess
 import psutil
 import os
@@ -19,7 +19,7 @@ except Exception as e:
 
 try:
     print('RUNNING ZAP DAEMON on port 8081')
-    #define the command and open the daemon with subprocess module 
+    #define the command and open the ZAP daemon with subprocess module 
     command = './zap.sh -daemon -config api.key=123456 -port 8081 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true'
     server = subprocess.Popen(command.split(), stdout=subprocess.PIPE, cwd='/usr/share/zaproxy')
     sh.tail('/root/.ZAP/zap.log')
