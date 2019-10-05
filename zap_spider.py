@@ -63,7 +63,7 @@ print('zap_urls.txt FILE WAS WRITTEN TO THE CWD')
 
 print('KILLING ZAP DAEMON AND CLEANING UP')
 
-procs_to_kill = ['/usr/share/zaproxy/zap-2.7.0.jar'] #process that seem to stay open after scripts finish
+procs_to_kill = ['/usr/share/zaproxy/zap-2.7.0.jar'] #process that stays open after script finishes 
 
 #KILL RUNNING PROCESSES
 for proc in psutil.process_iter():
